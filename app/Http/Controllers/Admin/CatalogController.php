@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Tech;
+use DB;
 use Illuminate\Http\Request;
 use Storage;
 
@@ -120,15 +121,25 @@ class CatalogController extends Controller
             /** @var \App\Tech $tech */
             $tech = \App\Tech::find($id);
             $tech->update($request->all());
+            if($tech->toArray()['tech_type'] != str_replace('\App', 'App',$name_class)){
+                /** @var \App\Bus $_tech */
+                $_tech = new $name_class();
+                $_tech->fill($request->get('t')[$_tech->getTable()]);
+                $_tech->push();
+                $_id = $_tech->getQueueableId();
+                DB::table($tech->getTable())
+                    ->where('id', $tech->toArray()['id'])
+                    ->update(['tech_id' => $_id, 'tech_type' => str_replace('\App', 'App', $name_class)]);
+            } else{
+                /** @var \App\Bus $_tech */
+                $_tech = $tech->tech()->getResults();
+                $_tech->update($request->get('t')[$_tech->getTable()]);
+            }
             $files = $request->get('files');
             $tech->photos()->whereNotIn('id', $files)->delete();
             if(!empty($files)){
                 $tech->photos()->saveMany(\App\Photo::whereIn('id', $request->get('files'))->get());
             }
-            /** @var \App\Bus $_tech */
-            $_tech = $tech->tech()->getResults();
-
-            $_tech->update($request->get('t')[$_tech->getTable()]);
             return response()->json(['id' => $id]);
         } else{
             throw new \Exception('Выбран несуществующий класс');
