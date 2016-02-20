@@ -46,10 +46,10 @@ class NewsController extends Controller
 
     public function create(Request $request){
         $this->validate($request, [
-            'title' => 'required|max:255',
+            'title' => 'required',
             'description' => '',
             'text' => '',
-            'author' => 'max:255',
+            'author' => '',
         ]);
 
         $news = new \App\News();
@@ -89,10 +89,10 @@ class NewsController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title' => 'required|max:255',
+            'title' => 'required',
             'description' => '',
             'text' => '',
-            'author' => 'max:255',
+            'author' => '',
         ]);
 
         $news = \App\News::findOrFail($id);
