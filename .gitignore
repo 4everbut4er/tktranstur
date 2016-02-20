@@ -1,0 +1,10 @@
+/vendor
+/node_modules
+Homestead.yaml
+Homestead.json
+.env
+/public/dev
+/public/dev_admin
+/public/s
+/public/template
+/public/template_admin

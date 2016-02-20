@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0427e67b-e98a-4460-a01e-a52b65a96671" name="elastictech.org" url="http://black.elastictech.org">
+        <fileTransfer host="black.elastictech.org" port="22" accessType="SFTP" password="dfd3dfebdfd9dfc3dfeedfcedffbdfd8" username="u842">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
