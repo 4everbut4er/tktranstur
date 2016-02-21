@@ -49,7 +49,7 @@
                                 @if(!empty($bus['photos'][0]['file']))
                                     <div class='image-link'>
                                         <i class='fa fa-search'></i>
-                                        <img class="img-responsive img-rounded center-block" alt="Toyota Hiace" width="262" height="262" src="/s/s/photo/{{ $bus['photos'][0]['file'] }}" />
+                                        <img class="img-responsive img-rounded center-block" alt="{{ $bus['maker'] }} {{ $bus['name'] }}" width="262" height="262" src="/s/s/photo/{{ $bus['photos'][0]['file'] }}" />
                                     </div>
                                 @else
                                     <div class='image-link'>
@@ -57,7 +57,7 @@
                                         <img class="img-responsive img-rounded center-block" alt="no photo" width="262" height="262" src="http://placehold.it/262x262" />
                                     </div>
                                 @endif
-                                <h3 class='title'>{{ $bus['name'] }} {{ $bus['maker'] }}</h3>
+                                <h3 class='title'>{{ $bus['maker'] }} {{ $bus['name'] }}</h3>
                                 <p class='category'>{{ (int)$bus['t']['capacity'] }} посадочных мест</p>
                                 <p class='category'><b>{{ number_format($bus['price_hourly'], 2) }} руб/час</b></p>
                                 <p class='category'>{{ $bus['year'] }} года выпуска</p>

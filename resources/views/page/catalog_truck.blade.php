@@ -51,7 +51,7 @@
                                 </div>
                                 @endif
                                 <h3 class='title'>{{ $tech['name'] }} {{ $tech['maker'] }}</h3>
-                                <p class='category'>{{ $types[str_replace('App\\', '', $tech['tech_type'])] }} посадочных мест</p>
+                                <p class='category'>{{ $types[str_replace('App\\', '', $tech['tech_type'])] }}</p>
                                 <p class='category'><b>{{ number_format($tech['price_hourly'], 2) }} руб/час</b></p>
                                 <p class='category'>{{ $tech['year'] }} года выпуска</p>
                             </a>

@@ -56,46 +56,28 @@
                             </h2>
                         </div>
                         <div class='row portfolio-boxes'>
-                            <div class='col-sm-3 col-xs-6 no-mb-t-xs portfolio-box'>
-                                <a href='#'>
-                                    <div class='image-link'>
-                                        <i class='fa fa-link'></i>
-                                        <img class="img-responsive img-rounded center-block" alt="Toyota Hiace" width="262" height="262" src="/static/images/toyota_hiace_norm.jpg" />
+                            @if(!empty($buses))
+                                @foreach($buses as $bus)
+                                    <div class='col-sm-3 col-xs-6 no-mb-t-xs portfolio-box'>
+                                        <a href='{{ route('catalog.bus.detail', $bus['id']) }}'>
+                                            @if(!empty($bus['photos'][0]['file']))
+                                                <div class='image-link'>
+                                                    <i class='fa fa-search'></i>
+                                                    <img class="img-responsive img-rounded center-block" alt="{{ $bus['maker'] }} {{ $bus['name'] }}" width="262" height="262" src="/s/s/photo/{{ $bus['photos'][0]['file'] }}" />
+                                                </div>
+                                            @else
+                                                <div class='image-link'>
+                                                    <i class='fa fa-search'></i>
+                                                    <img class="img-responsive img-rounded center-block" alt="no photo" width="262" height="262" src="http://placehold.it/262x262" />
+                                                </div>
+                                            @endif
+                                            <h3 class='title'>{{ $bus['maker'] }} {{ $bus['name'] }}</h3>
+                                            <p class='category'>{{ (int)$bus['t']['capacity'] }} посадочных мест</p>
+                                            <p class='category'><b>{{ number_format($bus['price_hourly'], 2) }} руб/час</b></p>
+                                        </a>
                                     </div>
-                                    <h3 class='title'>Toyota Hiace</h3>
-                                    <p class='category'>15 посадочных мест</p>
-                                </a>
-                            </div>
-                            <div class='col-sm-3 col-xs-6 no-mb-t-xs portfolio-box'>
-                                <a href='#'>
-                                    <div class='image-link'>
-                                        <i class='fa fa-link'></i>
-                                        <img class="img-responsive img-rounded center-block" alt="Mercedes" width="262" height="262" src="/static/images/mercedes_norm.jpg" />
-                                    </div>
-                                    <h3 class='title'>Mercedes</h3>
-                                    <p class='category'>48 посадочных мест</p>
-                                </a>
-                            </div>
-                            <div class='col-sm-3 col-xs-6 portfolio-box'>
-                                <a href='#'>
-                                    <div class='image-link'>
-                                        <i class='fa fa-link'></i>
-                                        <img class="img-responsive img-rounded center-block" alt="Toyota Hiace" width="262" height="262" src="/static/images/toyota_hiace_norm.jpg" />
-                                    </div>
-                                    <h3 class='title'>Toyota Hiace</h3>
-                                    <p class='category'>15 посадочных мест</p>
-                                </a>
-                            </div>
-                            <div class='col-sm-3 col-xs-6 portfolio-box'>
-                                <a href='#'>
-                                    <div class='image-link'>
-                                        <i class='fa fa-link'></i>
-                                        <img class="img-responsive img-rounded center-block" alt="Mercedes" width="262" height="262" src="/static/images/mercedes_norm.jpg" />
-                                    </div>
-                                    <h3 class='title'>Mercedes</h3>
-                                    <p class='category'>48 посадочных мест</p>
-                                </a>
-                            </div>
+                                @endforeach
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -109,46 +91,28 @@
                             </h2>
                         </div>
                         <div class='row portfolio-boxes'>
-                            <div class='col-sm-3 col-xs-6 no-mb-t-xs portfolio-box'>
-                                <a href='#'>
-                                    <div class='image-link'>
-                                        <i class='fa fa-link'></i>
-                                        <img class="img-responsive img-rounded center-block" alt="Etiam vestibulum" width="262" height="262" src="/static/images/betonomeshalka_norm.jpg" />
+                            @if(!empty($techs))
+                                @foreach($techs as $tech)
+                                    <div class='col-sm-3 portfolio-box portfolio-filter-{{ str_replace('App\\', '', $tech['tech_type']) }} portfolio-item'>
+                                        <a href='{{ route('catalog.truck.detail', $tech['id']) }}'>
+                                            @if(!empty($tech['photos'][0]['file']))
+                                                <div class='image-link'>
+                                                    <i class='fa fa-search'></i>
+                                                    <img class="img-responsive img-rounded center-block" alt="{{ $tech['name'] }}" width="262" height="262" src="/s/s/photo/{{ $tech['photos'][0]['file'] }}" />
+                                                </div>
+                                            @else
+                                                <div class='image-link'>
+                                                    <i class='fa fa-search'></i>
+                                                    <img class="img-responsive img-rounded center-block" alt="no photo" width="262" height="262" src="http://placehold.it/262x262" />
+                                                </div>
+                                            @endif
+                                            <h3 class='title'>{{ $tech['name'] }} {{ $tech['maker'] }}</h3>
+                                            <p class='category'>{{ $types[str_replace('App\\', '', $tech['tech_type'])] }}</p>
+                                            <p class='category'><b>{{ number_format($tech['price_hourly'], 2) }} руб/час</b></p>
+                                        </a>
                                     </div>
-                                    <h3 class='title'>Автобетоносмеситель</h3>
-                                    <p class='category'>1 000 руб/час</p>
-                                </a>
-                            </div>
-                            <div class='col-sm-3 col-xs-6 no-mb-t-xs portfolio-box'>
-                                <a href='#'>
-                                    <div class='image-link'>
-                                        <i class='fa fa-link'></i>
-                                        <img class="img-responsive img-rounded center-block" alt="Malesuada" width="262" height="262" src="/static/images/manip_norm.jpg" />
-                                    </div>
-                                    <h3 class='title'>Манипулятор 3 тонны</h3>
-                                    <p class='category'>1 200 руб/час</p>
-                                </a>
-                            </div>
-                            <div class='col-sm-3 col-xs-6 no-mb-t-xs portfolio-box'>
-                                <a href='#'>
-                                    <div class='image-link'>
-                                        <i class='fa fa-link'></i>
-                                        <img class="img-responsive img-rounded center-block" alt="Etiam vestibulum" width="262" height="262" src="/static/images/betonomeshalka_norm.jpg" />
-                                    </div>
-                                    <h3 class='title'>Автобетоносмеситель</h3>
-                                    <p class='category'>1 000 руб/час</p>
-                                </a>
-                            </div>
-                            <div class='col-sm-3 col-xs-6 no-mb-t-xs portfolio-box'>
-                                <a href='#'>
-                                    <div class='image-link'>
-                                        <i class='fa fa-link'></i>
-                                        <img class="img-responsive img-rounded center-block" alt="Malesuada" width="262" height="262" src="/static/images/manip_norm.jpg" />
-                                    </div>
-                                    <h3 class='title'>Манипулятор 3 тонны</h3>
-                                    <p class='category'>1 200 руб/час</p>
-                                </a>
-                            </div>
+                                @endforeach
+                            @endif
                         </div>
                     </div>
                 </div>

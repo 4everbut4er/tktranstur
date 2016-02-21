@@ -151,7 +151,7 @@
       </column>
       <column id="52" parent="7" name="title">
         <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
+        <data-type>varchar(255)</data-type>
       </column>
       <column id="53" parent="7" name="description">
         <mandatory>1</mandatory>
