@@ -69,19 +69,11 @@
                     <ul class='list-unstyled list-padded'>
                         <li>
                             <i class='fa fa-angle-right fa fa-fixed-width text-contrast'></i>
-                            <a href="#">Каталог автобусов</a>
+                            <a title="Каталог автобусов" href="{{ route('catalog.bus') }}">Каталог автобусов</a>
                         </li>
                         <li>
                             <i class='fa fa-angle-right fa fa-fixed-width text-contrast'></i>
-                            <a href="#">Каталог спецтехники</a>
-                        </li>
-                        <li>
-                            <i class='fa fa-angle-right fa fa-fixed-width text-contrast'></i>
-                            <a href="#">Автобусы для свадьбы</a>
-                        </li>
-                        <li>
-                            <i class='fa fa-angle-right fa fa-fixed-width text-contrast'></i>
-                            <a href="#">Автобус для трансферов</a>
+                            <a title="Каталог спецтехники" href="{{ route('catalog.truck') }}">Каталог спецтехники</a>
                         </li>
                     </ul>
                 </div>
