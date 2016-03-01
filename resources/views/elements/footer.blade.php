@@ -9,12 +9,15 @@
                         <li>ул. Маяковского 11</li>
                         <li>почтовый индекс: 426000</li>
                     </ul>
-                    <p class='no-mg-b'><a href="#">Смотреть на карте</a></p>
+                    <p class='no-mg-b'><a href="{{ route('contact') }}#map-canvas">Смотреть на карте</a></p>
                     <br>
                     <ul class='list-unstyled'>
-                        <li><a href="tel:+073412676667">+7 (3412) 67-66-67</a></li>
-                        <li><a href="tel:+073412615316">+7 (3412) 61-53-16</a></li>
-                        <li><a href="tel:+073412614777">+7 (3412) 61-47-77</a></li>
+                        <li><i class='fa fa-bus'></i> Заказ автобусов</li>
+                        <li><a title="Заказ автобусов" href="tel:+073412676667">+7 (3412) 67-66-67</a></li>
+                        <li><a title="Заказ автобусов" href="tel:+073412615316">+7 (3412) 61-53-16</a></li>
+                        <li><i class='fa fa-truck'></i> Заказ спецтехники</li>
+                        <li><a title="Заказ спецтехники" href="tel:+073412614777">+7 (3412) 61-47-77</a></li>
+                        <li><a title="Заказ спецтехники" href="tel:+079128589911">+7 (912) 858-99-11</a></li>
                     </ul>
                 </div>
                 <div class='col-md-3 col-sm-6 info-box social-box'>

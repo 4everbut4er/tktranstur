@@ -14,8 +14,8 @@ class FeedbackController extends BaseController
      */
     public function send(Request $request)
     {
-        $to = "4everbut4er@gmail.com";                     // email to which messages from contact form will be delivered
-        $subject = "Message from contact form";     // email subject
+        $to = "grifan18@yandex.ru";                     // email to which messages from contact form will be delivered
+        $subject = "Заказ с сайта";     // email subject
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
