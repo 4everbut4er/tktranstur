@@ -7,7 +7,7 @@
                 <div class='row'>
                     <div class='col-sm-12'>
                         <h1 class='title'>
-                            Автобусы
+                            Техника
                         </h1>
                         <ol class='breadcrumb'>
                             <li>
