@@ -12,7 +12,7 @@
                         </h1>
                         <ol class='breadcrumb'>
                             <li>
-                                <a href='index.html'>
+                                <a href='{{ url('/') }}'>
                                     <i class='fa fa-home'></i>
                                 </a>
                             </li>
@@ -68,8 +68,9 @@
                                 </div>
                                 <h3>E-Mail</h3>
                                 <ul class='list-unstyled'>
-                                    <li><a href="mailto:info@domain.com">info@domain.com</a></li>
-                                    <li><a href="mailto:support@domain.com">support@domain.com</a></li>
+                                    <li><a href="mailto:transtur18@yandex.ru">transtur18@yandex.ru</a></li>
+                                    <li><a href="mailto:79058763552@yandex.ru">79058763552@yandex.ru</a></li>
+                                    <li><a href="mailto:elena-b.69@mail.ru">elena-b.69@mail.ru</a></li>
                                 </ul>
                             </div>
                             <div class='col-sm-3'>
