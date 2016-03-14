@@ -127,8 +127,7 @@
                                                 <thead>
                                                 <tr>
                                                     <th>
-                                                        <i class='fa fa-clock-o text-contrast'></i>
-                                                        Время
+                                                        Тип
                                                     </th>
                                                     <th>
                                                         <i class='fa fa-money text-contrast'></i>
@@ -139,20 +138,22 @@
                                                 <tbody>
                                                 <tr class='  '>
                                                     <td>
-                                                        заказ до 6 часов
+                                                        за 1 час
                                                     </td>
                                                     <td>
                                                         {{ number_format($bus['price_hourly']) }} руб/час
                                                     </td>
                                                 </tr>
+                                                @if(!empty($bus['t']['price_mileage']))
                                                 <tr class='  '>
                                                     <td>
-                                                        смена
+                                                        за 1 км
                                                     </td>
                                                     <td>
-                                                        {{ number_format($bus['price_shift']) }} рублей
+                                                        {{ number_format($bus['t']['price_mileage']) }} руб/км
                                                     </td>
                                                 </tr>
+                                                @endif
                                                 </tbody>
                                             </table>
                                         </div>

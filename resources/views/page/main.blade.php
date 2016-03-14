@@ -43,7 +43,8 @@
             <div class='container'>
                 <div class='row'>
                     <div class='col-sm-12'>
-                        <p class='lead text-center'>Заказ автобусов и аренда спецтехники осуществляется по телефону <b>+7 (3412) 67-66-67</b>.</p>
+                        <p class='lead text-center'>Заказ автобусов осуществляется по телефону <b>+7 (3412) 67-66-67</b></p>
+                        <p class='lead text-center'>Аренда спецтехники осуществляется по телефону <b>+7 (3412) 55-20-10</b></p>
                     </div>
                 </div>
                 <div class='row'>
@@ -170,14 +171,18 @@
                         <div class='row'>
                             <div class='col-sm-12'>
                                 <div class='client-slideshow cycle-slideshow' data-cycle-carousel-fluid='true' data-cycle-fx='carousel' data-cycle-timeout='2000'>
-                                    <img alt="" width="73" height="33" src="/static/images/logo_bars.jpg" />
-                                    <img alt="" width="94" height="33" src="/static/images/logo_block.jpg" />
+                                    <img alt="" width="222" height="33" src="/static/images/_logo_sber.jpg" />
+                                    <img alt="" width="82" height="33" src="/static/images/_logo_spec_stroy_rus.jpg" />
                                     <img alt="" width="205" height="33" src="/static/images/logo_kalash.jpg" />
-                                    <img alt="" width="62" height="33" src="/static/images/logo_kupol.jpg" />
-                                    <img alt="" width="73" height="33" src="/static/images/logo_bars.jpg" />
-                                    <img alt="" width="94" height="33" src="/static/images/logo_block.jpg" />
+                                    <img alt="" width="79" height="33" src="/static/images/_logo_vtb.jpg" />
+                                    <img alt="" width="83" height="33" src="/static/images/_logo_izhgtu.jpg" />
+
+                                    <img alt="" width="222" height="33" src="/static/images/_logo_sber.jpg" />
+                                    <img alt="" width="82" height="33" src="/static/images/_logo_spec_stroy_rus.jpg" />
                                     <img alt="" width="205" height="33" src="/static/images/logo_kalash.jpg" />
-                                    <img alt="" width="62" height="33" src="/static/images/logo_kupol.jpg" />
+                                    <img alt="" width="79" height="33" src="/static/images/_logo_vtb.jpg" />
+                                    <img alt="" width="83" height="33" src="/static/images/_logo_izhgtu.jpg" />
+
                                 </div>
                             </div>
                         </div>

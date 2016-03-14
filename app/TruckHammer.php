@@ -14,7 +14,7 @@ class TruckHammer extends Model
         'force' => [
             'name' => 'Сила удара',
             'prefix' => '',
-            'suffix' => 'МПа',
+            'suffix' => 'Дж',
         ],
         'frequency' => [
             'name' => 'Частота удара',
@@ -23,7 +23,7 @@ class TruckHammer extends Model
         ]
     ];
 
-    public function getOptions(){
+    public static function getOptions(){
         return self::$options;
     }
 

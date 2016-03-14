@@ -8,7 +8,7 @@ class TruckHelp extends Model
 {
     protected $table = 'truck_help';
     public $timestamps = false;
-    protected $fillable = ['formula', 'winch'];
+    protected $fillable = ['formula', 'winch', 'price_mileage'];
 
     protected static $options = [
         'formula' => [
@@ -24,7 +24,7 @@ class TruckHelp extends Model
         ]
     ];
 
-    public function getOptions(){
+    public static function getOptions(){
         return self::$options;
     }
 

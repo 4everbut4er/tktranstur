@@ -46,7 +46,7 @@ class TruckBackhoeLoader extends Model
         ]
     ];
 
-    public function getOptions(){
+    public static function getOptions(){
         return self::$options;
     }
 

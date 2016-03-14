@@ -40,6 +40,20 @@ class Tech extends Model
         'TruckNightman' => 'Ассенизатор',
         'TruckHelp' => 'Техпомощь',
         'TruckHydrodrill' => 'Гидробур',
+        'TruckManipulator' => 'Манипулятор',
     ];
+
+    public static function getAllOptions(){
+        $result = [];
+        foreach(self::$type_tech as $class => $name){
+            $class_name = "\\App\\{$class}";
+            $obj = new $class_name();
+            if(method_exists($obj, 'getOptions') && method_exists($obj, 'getTable')){
+                $result[$obj->getTable()] = $obj->getOptions();
+            }
+        }
+
+        return $result;
+    }
 }
 

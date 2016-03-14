@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Bus extends Model
 {
     protected $table = 'bus';
-    protected $fillable = ['capacity'];
+    protected $fillable = ['capacity', 'price_mileage'];
     public $timestamps = false;
 
     public function tech()

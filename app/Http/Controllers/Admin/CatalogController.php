@@ -55,7 +55,7 @@ class CatalogController extends Controller
             'maker' => 'required|max:255',
             'year' => 'numeric',
             'price_hourly' => 'required|numeric',
-            'price_shift' => 'required|numeric',
+//            'price_shift' => 'required|numeric',
             'type' => 'required|in:' . implode(',', array_keys(\App\Tech::$type_tech)),
             't' => 'array',
             'files' => 'array',
@@ -73,7 +73,7 @@ class CatalogController extends Controller
                 'maker' => $request->get('maker'),
                 'year' => $request->get('year'),
                 'price_hourly' => $request->get('price_hourly'),
-                'price_shift' => $request->get('price_shift'),
+//                'price_shift' => $request->get('price_shift'),
             ]);
             $_tech->save();
             $_tech->photos()->saveMany(\App\Photo::whereIn('id', $request->get('files'))->get());
@@ -100,7 +100,8 @@ class CatalogController extends Controller
         $result['t'][$entity->tech()->getRelated()->getTable()] = $entity->tech()->getResults()->toArray();
         return view('admin.tech_edit', [
             'tech' => $result,
-            'types' => \App\Tech::$type_tech
+            'types' => \App\Tech::$type_tech,
+            'options' => \App\Tech::getAllOptions()
         ]);
     }
 
@@ -111,7 +112,7 @@ class CatalogController extends Controller
             'maker' => 'required|max:255',
             'year' => 'numeric',
             'price_hourly' => 'required|numeric',
-            'price_shift' => 'required|numeric',
+//            'price_shift' => 'required|numeric',
             'type' => 'required|in:' . implode(',', array_keys(\App\Tech::$type_tech)),
             't' => 'array',
             'files' => 'array',

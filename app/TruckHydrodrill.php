@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class TruckHydrodrill extends Model
 {
-    protected $table = 'truck_hydrodril';
+    protected $table = 'truck_hydrodrill';
     public $timestamps = false;
     protected $fillable = ['depth', 'screw'];
 
@@ -23,7 +23,7 @@ class TruckHydrodrill extends Model
         ]
     ];
 
-    public function getOptions(){
+    public static function getOptions(){
         return self::$options;
     }
 

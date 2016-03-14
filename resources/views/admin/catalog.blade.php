@@ -115,7 +115,11 @@
                         if(photos){
                             var index;
                             var result = '<div class="lightBoxGallery">';
-                            for (index = 0; index < photos.length; ++index) {
+                            var i = photos.length;
+                            if(i > 4){
+                                i = 4;
+                            }
+                            for (index = 0; index < i; ++index) {
                                 result += '<a href="/s/origin/photo/'+photos[index].file+'" title="'+photos[index].name+'" data-gallery="tech_'+photos[index].imageable_id+'"><img src="/s/m/photo/'+photos[index].file+'"></a>';
                             }
                             result += '</div>'
