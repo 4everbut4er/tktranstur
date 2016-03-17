@@ -117,6 +117,7 @@
                         </div>
                     </div>
                 </div>
+                @if(!$reviews->isEmpty())
                 <div class='row'>
                     <div class='col-sm-12'>
                         <div class='page-header page-header-with-icon'>
@@ -126,39 +127,29 @@
                         <div class='row quotes'>
                             <div class='carousel carousel-default slide carousel-auto' id='carousel-testimonials'>
                                 <div class='carousel-inner'>
-                                    <div class='item active quote'>
-                                        <div class='col-sm-12 text-center'>
-                                            <p class='lead'>
-                                                Хотим выразить благодарность водителю Владимиру, номер автобуса 702! Хорошее вождение, своевременное прибытие в обе стороны! Будем рады видеть его и в других поездках!</p>
-                                            <div class='author-wrapper'>
-                                                <p class='author'>
-                                                    <strong>Анна Владимировна</strong>,
-                                                    Лицей № 65
-                                                </p>
+                                    @foreach($reviews as $i => $review)
+                                        <div class='item {{ $i > 0 ? '' : 'active' }} quote'>
+                                            <div class='col-sm-12 text-center'>
+                                                <p class='lead'>{{ $review->text }}</p>
+                                                <div class='author-wrapper'>
+                                                    <p class='author'>
+                                                        <strong>{{ $review->name }}</strong>, {{ $review->company }}
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class='item quote'>
-                                        <div class='col-sm-12 text-center'>
-                                            <p class='lead'>
-                                                Выражаем огромную благодарность компании "Транстур" и лично нашим водителям Владимиру и Андрею за прекрасную работу. Заказывали автобусы впервые и ничуть не пожалели, что выбрали именно вашу компанию.</p>
-                                            <div class='author-wrapper'>
-                                                <p class='author'>
-                                                    <strong>Надежда Адаменко</strong>,
-                                                    Концерн "Калашников"
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                                 <ol class='carousel-indicators'>
-                                    <li class='active' data-slide-to='0' data-target='#carousel-testimonials'></li>
-                                    <li data-slide-to='1' data-target='#carousel-testimonials'></li>
+                                    @foreach($reviews as $i => $review)
+                                        <li {{ $i > 0 ? '' : 'class=active' }} data-slide-to='{{ $i }}' data-target='#carousel-testimonials'></li>
+                                    @endforeach
                                 </ol>
                             </div>
                         </div>
                     </div>
                 </div>
+                @endif
                 <div class='row'>
                     <div class='col-sm-12'>
                         <div class='page-header page-header-with-icon'>

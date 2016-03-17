@@ -76,4 +76,25 @@ Breadcrumbs::register('admin.users', function($breadcrumbs)
     $breadcrumbs->push('Пользователи', route('admin.users'));
 });
 
+Breadcrumbs::register('admin.review', function($breadcrumbs)
+{
+    /** @var $breadcrumbs \DaveJamesMiller\Breadcrumbs\Generator */
+    $breadcrumbs->parent('admin');
+    $breadcrumbs->push('Отзывы', route('admin.review'));
+});
+
+Breadcrumbs::register('admin.review.add', function($breadcrumbs)
+{
+    /** @var $breadcrumbs \DaveJamesMiller\Breadcrumbs\Generator */
+    $breadcrumbs->parent('admin.review');
+    $breadcrumbs->push('Добавить отзыв', route('admin.review.add'));
+});
+
+Breadcrumbs::register('admin.review.edit', function($breadcrumbs, $obj)
+{
+    /** @var $breadcrumbs \DaveJamesMiller\Breadcrumbs\Generator */
+    $breadcrumbs->parent('admin.review');
+    $breadcrumbs->push('Редактировать отзыв', route('admin.review.edit', $obj['id']));
+});
+
 

@@ -47,8 +47,11 @@
                 <li {{ Request::is('admin/news', 'admin/news/*') ? 'class=active' : ''}}>
                     <a href="{{ url('/admin/news') }}"><i class="fa fa-newspaper-o"></i> <span class="nav-label">Новости</span> </a>
                 </li>
-                <li {{ Request::is('admin/catalog', 'admin/catalog/*') ? 'class="active"' : ''}}>
+                <li {{ Request::is('admin/catalog', 'admin/catalog/*') ? 'class=active' : ''}}>
                     <a href="{{ url('/admin/catalog') }}"><i class="fa fa-bus"></i> <span class="nav-label">Каталог</span> </a>
+                </li>
+                <li {{ Request::is('admin/review', 'admin/review/*') ? 'class=active' : ''}}>
+                    <a href="{{ url('/admin/review') }}"><i class="fa fa-comment-o"></i> <span class="nav-label">Отзывы</span> </a>
                 </li>
             </ul>
 

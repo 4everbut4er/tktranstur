@@ -86,5 +86,13 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('admin/catalog/add.json', 'Admin\CatalogController@create')->name('admin.catalog.add.json');
 
     Route::post('admin/photo/add', 'Admin\PhotoController@create')->name('admin.photo.add');
+
+    Route::get('admin/review', 'Admin\ReviewController@index')->name('admin.review');
+    Route::get('admin/review/add', 'Admin\ReviewController@add')->name('admin.review.add');
+    Route::get('admin/review/{id}/delete', 'Admin\ReviewController@remove')->name('admin.review.delete');
+    Route::get('admin/review/{id}/edit', 'Admin\ReviewController@edit')->name('admin.review.edit');
+    Route::post('admin/review/{id}/edit.json', 'Admin\ReviewController@update')->name('admin.review.edit.json');
+    Route::post('admin/review/add.json', 'Admin\ReviewController@create')->name('admin.review.add.json');
+    Route::post('admin/review/table.json', 'Admin\ReviewController@table')->name('admin.review.table.json');
 });
 

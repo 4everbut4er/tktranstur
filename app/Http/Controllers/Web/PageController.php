@@ -34,13 +34,15 @@ class PageController extends BaseController
             }
         }
 
+        $review = \App\Review::orderBy('id', 'desc')->take(4)->get();
         $types = \App\Tech::$type_tech;
         unset($types['Bus']);
 
         return view('page.main', [
             'buses' => $buses_array,
             'techs' => $techs_array,
-            'types' => $types
+            'types' => $types,
+            'reviews' => $review
         ]);
     }
 
