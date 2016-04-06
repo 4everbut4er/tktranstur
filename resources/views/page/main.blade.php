@@ -107,7 +107,7 @@
                                                     <img class="img-responsive img-rounded center-block" alt="no photo" width="262" height="262" src="http://placehold.it/262x262" />
                                                 </div>
                                             @endif
-                                            <h3 class='title'>{{ $tech['name'] }} {{ $tech['maker'] }}</h3>
+                                            <h3 class='title'>{{ $tech['maker'] }} {{ $tech['name'] }}</h3>
                                             <p class='category'>{{ $types[str_replace('App\\', '', $tech['tech_type'])] }}</p>
                                             <p class='category'><b>{{ number_format($tech['price_hourly'], 2) }} руб/час</b></p>
                                         </a>

@@ -56,7 +56,7 @@
                                     <ul class='list-unstyled list-padded'>
                                         <li>
                                             <i class='fa fa-phone text-contrast fa fa-fixed-width'></i>
-                                            +7 (3412) 67-66-67
+                                            +7 (3412) 55-20-10
                                         </li>
                                     </ul>
                                 </div>
