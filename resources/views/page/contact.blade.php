@@ -1,4 +1,6 @@
-@extends('layouts.web_contact')
+@extends('layouts.web')
+
+@section('body_classes', 'contact-page contact-page-wide-map')
 
 @section('content')
     <div id='main' role='main'>
@@ -149,4 +151,41 @@
             <i class='fa fa-chevron-up'></i>
         </div>
     </div>
+@endsection
+
+@section('content')
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+    <script>
+        var initializeMap;
+
+        initializeMap = function() {
+            var iw1, latlng, map, marker, options;
+
+            latlng = new google.maps.LatLng(56.828478, 53.200273);
+            options = {
+                scrollwheel: false,
+                zoom: 16,
+                center: latlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                mapTypeControl: true
+            };
+
+            map = new google.maps.Map(document.getElementById("map-canvas"), options);
+
+            marker = new google.maps.Marker({
+                position: latlng,
+                map: map
+            });
+
+            iw1 = new google.maps.InfoWindow({
+                content: "Here we are!"
+            });
+
+            return google.maps.event.addListener(marker, "click", function(e) {
+                return iw1.open(map, this);
+            });
+        };
+
+        google.maps.event.addDomListener(window, 'load', initializeMap);
+    </script>
 @endsection

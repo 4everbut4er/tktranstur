@@ -25,7 +25,7 @@
     <script src="/static/javascripts/ie/respond.min.js" type="text/javascript"></script>
     <![endif]-->
 </head>
-<body class='homepage black-and-white'>
+<body class='@yield('body_classes', 'homepage black-and-white')'>
 <div id='wrapper'>
     @include('elements.header')
 
@@ -49,6 +49,7 @@
 <script src="/static/javascripts/plugins/nivo_lightbox/nivo-lightbox.min.js" type="text/javascript"></script>
 <script src="/static/javascripts/plugins/cycle/jquery.cycle.all.min.js" type="text/javascript"></script>
 <script src="/static/javascripts/jednotka.js" type="text/javascript"></script>
+@yield('maps_script')
 <script type="text/javascript">
     $(document).ready(function() {
         $.ajaxSetup({
