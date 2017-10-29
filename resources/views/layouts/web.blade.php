@@ -12,6 +12,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <meta name="yandex-verification" content="7c9b8a936987fb2c" />
     <!--[if IE]> <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'> <![endif]-->
     <link href='/static/images/meta_icons/favicon.ico' rel='shortcut icon' type='image/x-icon'>
     <!-- Не знаю надо ли TODO делать в последнюю очередь -->
